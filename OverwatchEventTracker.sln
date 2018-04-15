@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverwatchEventTracker", "OverwatchEventTracker\OverwatchEventTracker.csproj", "{D7DDDA21-43C4-4F05-9C92-15E2BA0850AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverwachEventTracker.DAL", "OverwachEventTracker.DAL\OverwachEventTracker.DAL.csproj", "{CC4B7995-7CB9-4D98-A26F-1A837089C939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D7DDDA21-43C4-4F05-9C92-15E2BA0850AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7DDDA21-43C4-4F05-9C92-15E2BA0850AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7DDDA21-43C4-4F05-9C92-15E2BA0850AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4B7995-7CB9-4D98-A26F-1A837089C939}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4B7995-7CB9-4D98-A26F-1A837089C939}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4B7995-7CB9-4D98-A26F-1A837089C939}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4B7995-7CB9-4D98-A26F-1A837089C939}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
