@@ -9,7 +9,6 @@ namespace OverwatchEventTracker.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            m_DbService.Test();
             return View();
         }
 

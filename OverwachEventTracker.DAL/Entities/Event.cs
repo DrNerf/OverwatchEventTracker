@@ -22,7 +22,7 @@ namespace OverwachEventTracker.DAL
             {
                 EndDate = src.EndDate,
                 EventId = src.EventId,
-                EventType = src.EventType,
+                EventType = (EventTypeModel)src.EventType,
                 SeasonalName = src.SeasonalName,
                 StartDate = src.StartDate
             };
