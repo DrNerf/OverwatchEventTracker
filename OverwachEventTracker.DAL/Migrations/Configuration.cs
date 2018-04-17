@@ -9,7 +9,7 @@ namespace OverwachEventTracker.DAL.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "OverwachEventTracker.DAL.OverwatchEventTrackerContext";
         }
 
