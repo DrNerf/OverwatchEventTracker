@@ -10,12 +10,14 @@ namespace OverwachEventTracker.DAL
 
         public NextEventModel GetNextEvent()
         {
-            var pastEvents = m_DbContext.Events.ToList();
+            var pastEvents = m_DbContext.Events
+                .Include("EventType")
+                .ToList();
             var currentYearMap = pastEvents
                 .Select(pe => new KeyValuePair<Event, DateTime>(pe, MapToCurrentYear(pe.StartDate)))
                 .OrderBy(cym => cym.Value)
                 .ToList();
-            var nextEvent = currentYearMap.Where(cym => cym.Value > DateTime.Now)
+            var nextEvent = currentYearMap.Where(cym => cym.Value > DateTime.UtcNow)
                 .Select(cym => cym.Key)
                 .FirstOrDefault();
             if (nextEvent == null)
@@ -34,7 +36,7 @@ namespace OverwachEventTracker.DAL
                 DisplayName = nextEvent.EventType.DisplayName,
                 OccursAt = estimatedStartDate,
                 EndsAt = estimatedEndDate,
-                
+                IsCurrent = estimatedStartDate >= DateTime.UtcNow
             };
         }
 

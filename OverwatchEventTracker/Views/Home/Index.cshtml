@@ -1,6 +1,8 @@
-﻿
+﻿@using OverwachEventTracker.DAL
+@model NextEventModel
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Is works!</h2>
+<h3>Next event is @Model.DisplayName and starts at @Model.OccursAt</h3>

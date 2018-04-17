@@ -9,7 +9,8 @@ namespace OverwatchEventTracker.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var nextEvent = m_DbService.GetNextEvent();
+            return View(nextEvent);
         }
 
         protected override void Dispose(bool disposing)
